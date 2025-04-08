@@ -8,6 +8,38 @@
     color: #111827;
   }
 
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  
+  .aurora-background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  }
+  
+  .aurora {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(120deg, #00feba, #5b5ea6, #ff6bcb, #00d2ff);
+    filter: blur(120px);
+    animation: move 10s ease-in-out infinite alternate;
+    opacity: 0.4;
+  }
+  
+  @keyframes move {
+    0% { transform: translate(-30%, -30%) rotate(0deg); }
+    100% { transform: translate(-10%, -20%) rotate(360deg); }
+  }
+  
+
   .navbar {
     background-color: #1f2937;
     color: #f3f4f6;
