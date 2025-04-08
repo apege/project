@@ -4,7 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Profil Alif dan Zahra</title>
+  <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
     .profile-img {
       max-width: 100%;
@@ -22,6 +25,65 @@
   </style>
 </head>
 <body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+    <div class="container-fluid">
+      <!-- Logo + Brand -->
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img
+          src="/image/favicon.png"
+          width="30"
+          height="30"
+          class="d-inline-block align-top rounded-circle"
+          alt=""
+        />
+        <span class="ms-2 fw-bold">Portofolio</span>
+      </a>
+
+      <!-- Toggler (Titik Tiga) -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarScroll"
+        aria-controls="navbarScroll"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Isi Menu -->
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">ABOUT</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              PROFILE
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="alip.html">Alif</a></li>
+              <li><a class="dropdown-item" href="jara.html">Zahra</a></li>
+              <li><hr class="dropdown-divider" /></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- NAVBAR END-->
+  
   <div class="container my-5">
 
     <!-- Judul dan Pembuka -->
@@ -69,6 +131,24 @@
     </div>
 
   </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <p>
+        © 2025 Muhammad Alif Muzakky & Zahra Fahira Rahman. All rights
+        reserved.
+      </p>
+      <div class="sosmed-icons">
+        <a href="https://www.instagram.com/_alfhzra?igsh=cnoyMDNhbm5mZHVk"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+  <!-- FOOTER END -->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
