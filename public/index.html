@@ -1,35 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Portofolio </title>
-    <link rel="shortcut icon" href="/image/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-</head>
-<body>
-    <!-- CSS -->
-     <style>
-      body {
-        background-color: bisque;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Portofolio</title>
+    <link rel="shortcut icon" href="/image/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        transition: all 0.3s ease-in-out;
       }
-     </style>
-    <!-- CSS END -->
+
+      body {
+        background-color: #f9fafb;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: #111827;
+      }
+
+      .navbar {
+        background-color: #1f2937;
+        color: #f3f4f6;
+        padding: 12px 24px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+      .navbar a {
+        color: #f3f4f6;
+        margin-right: 16px;
+        text-decoration: none;
+      }
+      .navbar a:hover {
+        color: #60a5fa; /* biru lembut pas hover */
+      }
+
+      .card {
+        background-color: #ffffff;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .card {
+        background-color: #ffffff;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        overflow: hidden; /* ini penting biar img ikut radius! */
+        width: 300px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .card-img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .card-body {
+        padding: 16px;
+        color: #111827;
+      }
+    </style>
+  </head>
+  <body>
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
       <div class="container-fluid">
         <!-- Logo + Brand -->
         <a class="navbar-brand d-flex align-items-center" href="#">
-          <img src="/image/favicon.png" width="30" height="30" class="d-inline-block align-top rounded-circle" alt="">
+          <img
+            src="/image/favicon.png"
+            width="30"
+            height="30"
+            class="d-inline-block align-top rounded-circle"
+            alt=""
+          />
           <span class="ms-2 fw-bold">Portofolio</span>
         </a>
-    
+
         <!-- Toggler (Titik Tiga) -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
-    
+
         <!-- Isi Menu -->
         <div class="collapse navbar-collapse" id="navbarScroll">
           <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll">
@@ -40,63 +110,103 @@
               <a class="nav-link" href="#">ABOUT</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
                 PROFILE
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="./alip.html">Alif</a></li>
                 <li><a class="dropdown-item" href="./jara.html">Zahra</a></li>
-                <li><hr class="dropdown-divider"></li>
+                <li><hr class="dropdown-divider" /></li>
               </ul>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    
-            <!-- NAVBAR END -->
+
+    <!-- NAVBAR END -->
 
     <!-- CONTENT -->
-    <div style="display: flex; justify-content: space-between; padding: 0 20px;">
-        <!-- Card Alip di kiri -->
-        <div class="card" style="width: 18rem; margin-top: 30px; border: 2px solid chocolate; box-shadow: 0 0 10px gold; ">
-          <img src="/image/alip.png" class="card-img-top" alt="Alip" style="height: 200px; object-fit: cover;">
-          <div class="card-body">
-            <p class="card-text">Nama: Muhammad Alif Muzakky</p>
-            <p class="card-text">TTL: Bandung, 11 Oktober 2008</p>
-            <p class="card-text">Alamat: Jl. Curug Candung</p>
-            <p class="card-text">SD: SDN 040 Pesawahan</p>
-            <p class="card-text">SMP: SMPN 11 Bandung</p>
-            <p class="card-text">SMK: SMKN 4 Bandung</p>
-            <p class="card-text">Ahli: Backend Developer</p>
-          </div>
-        </div>
-      
-        <!-- Card Jara di kanan -->
-        <div class="card" style="width: 18rem; margin-top: 30px; border: 2px solid chocolate; box-shadow: 0 0 10px gold">
-          <img src="/image/jara.png" class="card-img-top" alt="Jara" style="height: 200px; object-fit: cover;">
-          <div class="card-body">
-            <p class="card-text">Nama: Zahra Fahira Rahman</p>
-            <p class="card-text">TTL: Cimahi, 23 November 2008</p>
-            <p class="card-text">Alamat: Jl. Cijaura Hilir</p>
-            <p class="card-text">SD: SDN 250 Jakapurwa</p>
-            <p class="card-text">SMP: SMPN 48 Bandung</p>
-            <p class="card-text">SMK: SMKN 4 Bandung</p>
-            <p class="card-text">Ahli: Frontend Developer</p>
-          </div>
+    <div
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 40px;
+        padding: 0 20px;
+      "
+    >
+      <!-- Card Alif -->
+      <div
+        class="card"
+        style="
+          width: 18rem;
+          margin-top: 30px;
+          border: 2px solid red;
+          box-shadow: 0 0 15px red;
+        "
+      >
+        <img
+          src="/image/alip.png"
+          class="card-img-top"
+          alt="Alip"
+          style="height: 200px; object-fit: cover"
+        />
+        <div class="card-body">
+          <p class="card-text">Nama: Muhammad Alif Muzakky</p>
+          <p class="card-text">TTL: Bandung, 11 Oktober 2008</p>
+          <p class="card-text">Alamat: Jl. Curug Candung</p>
+          <p class="card-text">SD: SDN 040 Pesawahan</p>
+          <p class="card-text">SMP: SMPN 11 Bandung</p>
+          <p class="card-text">SMK: SMKN 4 Bandung</p>
+          <p class="card-text">Ahli: Backend Developer</p>
         </div>
       </div>
-      
-      
-      
+
+      <!-- Card Jara -->
+      <div
+        class="card"
+        style="
+          width: 18rem;
+          margin-top: 30px;
+          border: 2px solid red;
+          box-shadow: 0 0 15px red;
+        "
+      >
+        <img
+          src="/image/jara.png"
+          class="card-img-top"
+          alt="Jara"
+          style="height: 200px; object-fit: cover"
+        />
+        <div class="card-body">
+          <p class="card-text">Nama: Zahra Fahira Rahman</p>
+          <p class="card-text">TTL: Cimahi, 23 November 2008</p>
+          <p class="card-text">Alamat: Jl. Cijaura Hilir</p>
+          <p class="card-text">SD: SDN 250 Jakapurwa</p>
+          <p class="card-text">SMP: SMPN 48 Bandung</p>
+          <p class="card-text">SMK: SMKN 4 Bandung</p>
+          <p class="card-text">Ahli: Frontend Developer</p>
+        </div>
+      </div>
+    </div>
+
     <!-- CONTENT END -->
 
     <!-- FOOTER -->
-     <footer>
-      
-     </footer>
+    <footer></footer>
     <!-- FOOTER END -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
