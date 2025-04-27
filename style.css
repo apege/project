@@ -10,13 +10,20 @@ html, body {
   background-color: #f9fafb;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #111827;
-  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 body {
   display: flex;
   flex-direction: column;
 }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 
 /* Aurora Background */
 .aurora-background {
@@ -44,6 +51,7 @@ body {
 }
 
 /* Navbar */
+
 .navbar {
   background-color: #1f2937;
   color: #f3f4f6;
@@ -85,10 +93,6 @@ body {
 .card-body {
   padding: 16px;
   color: #111827;
-}
-
-.card p {
-  /* Tambahkan styling jika diperlukan */
 }
 
 /* Footer */
