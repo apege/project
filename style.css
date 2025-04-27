@@ -7,11 +7,12 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #f9fafb;
+  background: transparent; /* ini penting */
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #111827;
   overflow-y: scroll;
 }
+
 
 body {
   display: flex;
